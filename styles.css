@@ -1,0 +1,109 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: #d5fdf4; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Calculator Container */
+.calculator {
+    width: 320px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* Display Section */
+.display {
+    background: black;
+    color: white;
+    text-align: right;
+    padding: 20px;
+    font-size: 2rem;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.result {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+/* Buttons Section */
+.input {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 15px;
+}
+
+.input button {
+    background: #f0f0f0;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    padding: 15px;
+    color: #333;
+    cursor: pointer;
+    transition: 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input button:hover {
+    background: #e0e0e0;
+}
+
+.input button:active {
+    transform: scale(0.95);
+    background: #d4d4d4;
+}
+
+/* Special Buttons */
+.input button[value="ac"], 
+.input button[value="del"] {
+    background: #ff7b7b;
+    color: white;
+    font-weight: bold;
+}
+
+.input button[value="ac"]:hover,
+.input button[value="del"]:hover {
+    background: #ff5252;
+}
+
+.input button[value="="] {
+    background: #4caf50;
+    color: white;
+    font-weight: bold;
+}
+
+.input button[value="="]:hover {
+    background: #45a049;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .calculator {
+        width: 90%;
+    }
+
+    .display {
+        font-size: 1.5rem;
+        height: 70px;
+    }
+
+    .input button {
+        font-size: 1.2rem;
+        padding: 12px;
+    }
+}
